@@ -77,6 +77,14 @@ if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
 fi
 
 ##################################################################################################################################
+# TeamCity Server configuration
+# ----------
+
+echo Configuring TeamCity.
+
+. "$SCRIPT_DIR/teamcity-server.sh"
+
+##################################################################################################################################
 
 # Post deployment stub
 if [[ -n "$POST_DEPLOYMENT_ACTION" ]]; then
